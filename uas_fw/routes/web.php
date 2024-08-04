@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+ use App\Http\Controllers\DataObatController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,14 +14,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/master', function () {
-    return view('master');
-});
+// Route::get('/master', function () {
+//     return view('master');
+// });
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//dataobat
+Route::get('/dataobat/', [DataObatController::class, 'index']);
+Route::get('/dataobat/form/', [DataObatController::class, 'create']);
+Route::get('/dataobat/store/', [DataObatController::class, 'store']);
