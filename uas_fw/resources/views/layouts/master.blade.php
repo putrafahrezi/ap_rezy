@@ -200,6 +200,17 @@
             </a>
           </li>
 
+
+          <li class="nav-item">
+            <a href="/obatmasuk/" class="nav-link">
+              <i class="nav-icon fas fa-building"></i>
+              <p>
+                Data Obat Masuk
+
+              </p>
+            </a>
+          </li>
+
           <li class="nav-item">
             <a href="/dataobat/" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
@@ -210,15 +221,7 @@
             </a>
           </li>
 
-          <li class="nav-item">
-            <a href="/jurusan/" class="nav-link">
-              <i class="nav-icon fas fa-building"></i>
-              <p>
-                data pasien
-
-              </p>
-            </a>
-          </li>
+          
 
 
         </ul>

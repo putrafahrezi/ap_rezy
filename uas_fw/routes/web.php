@@ -30,4 +30,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 //dataobat
 Route::get('/dataobat/', [DataObatController::class, 'index']);
 Route::get('/dataobat/form/', [DataObatController::class, 'create']);
-Route::get('/dataobat/store/', [DataObatController::class, 'store']);
+Route::post('/dataobat/store/', [DataObatController::class, 'store']);

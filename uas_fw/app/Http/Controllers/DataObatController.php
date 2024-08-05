@@ -34,7 +34,10 @@ class DataObatController extends Controller
         $do = new DataObat;
         $do->kdobat = $request->kdobat;
         $do->namaobat = $request->namaobat;
-        $do->kadaluarsa = $request->kadaluarsa;
+        $do->jenis_obt = $request->jenis_obt;
+        $do->harga = $request->harga;
+        $do->stok_awl = $request->stok_awl;
+        $do->stok_sisa = $request->stok_sisa;
         $do->save();
 
 

@@ -69,9 +69,12 @@
                 <thead>
                     <tr>
                         <th>Nomor</th>
-                        <th>NIM</th>
-                        <th>Nama Lengkap</th>
-                        <th>Jurusan</th>
+                        <th>Kode Obat</th>
+                        <th>Nama Obat</th>
+                        <th>Harga</th>
+                        <th>Jenis Obat</th>
+                        <th>Stok Awal</th>
+                        <th>Stok Akhir</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -81,7 +84,10 @@
                             <td>{{$nomor++}}</td>
                             <td>{{$item->kdobat}}</td>
                             <td>{{$item->namaobat}}</td>
-                            <td>{{$item->kadaluarsa}}</td>
+                            <td>{{$item->harga}}</td>
+                            <td>{{$item->jenis_obt}}</td>
+                            <td>{{$item->stok_awl}}</td>
+                            <td>{{$item->stok_sisa}}</td>
                             <td>
                                 <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#detail{{$item->id}}">
                                     <i class="fa fa-eye"></i>
@@ -101,40 +107,27 @@
                                                 <tbody>
                                                         <tr>
                                                             <td>NIM</td>
-                                                            <th scope="row">{{$item->nim}}</th>
+                                                            <th scope="row">{{$item->kdobat}}</th>
                                                         </tr>
                                                         <tr>
                                                             <td>Nama</td>
-                                                            <th scope="row">{{$item->nama}}</th>
+                                                            <th scope="row">{{$item->namaobat}}</th>
                                                         </tr>
                                                         <tr>
                                                             <td>Tempat Lahir</td>
-                                                            <th scope="row">{{$item->tempat}}</th>
+                                                            <th scope="row">{{$item->harga}}</th>
                                                         </tr>
                                                         <tr>
                                                             <td>Tanggal Lahir</td>
-                                                            <th scope="row">{{$item->tanggal}}</th>
+                                                            <th scope="row">{{$item->jenis_obt}}</th>
                                                         </tr>
                                                         <tr>
                                                             <td>Alamat</td>
-                                                            <th scope="row">{{$item->alamat}}</th>
+                                                            <th scope="row">{{$item->stok_awl}}</th>
                                                         </tr>
                                                         <tr>
                                                             <td>Jenis Kelamin</td>
-                                                            <th scope="row">{{$item->jk}}</th>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Jurusan</td>
-                                                            <th scope="row">{{$item->jurusans->jurusan}}</th>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Agama</td>
-                                                            <th scope="row">{{$item->agama}}</th>
-                                                        </tr>
-
-                                                        <tr>
-                                                            <td>Foto</td>
-                                                            <th scope="row"><img src="{{ asset('/foto/'.$item->foto) }}" width="100" alt=""></th>
+                                                            <th scope="row">{{$item->stok_sisa}}</th>
                                                         </tr>
                                                 </tbody>
                                             </table>

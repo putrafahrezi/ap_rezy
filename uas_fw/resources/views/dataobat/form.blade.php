@@ -27,67 +27,33 @@
             <form method="post" action="/dataobat/store/" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
-                    <label class="form-label">NIM</label>
-                    <input type="text" class="form-control" name="nim">
+                    <label class="form-label">Kode Obat</label>
+                    <input type="text" class="form-control" name="kdobat">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Nama</label>
-                    <input type="text" class="form-control" name="nama">
+                    <label class="form-label">Nama Obat</label>
+                    <input type="text" class="form-control" name="namaobat">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Tempat Lahir</label>
-                    <input type="text" class="form-control" name="tempat">
+                    <label class="form-label">Harga</label>
+                    <input type="number" class="form-control" name="harga">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Tanggal Tanggal</label>
-                    <input type="date" class="form-control" name="tanggal">
+                    <label class="form-label">Stok Awal</label>
+                    <input type="number" class="form-control" name="stok_awl">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Alamat</label>
-                    <input type="text" class="form-control" name="alamat">
+                    <label class="form-label">Stok Sisa</label>
+                    <input type="number" class="form-control" name="stok_sisa">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Jenis Kelamin</label>
-                    <br>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="jk" id="inlineRadio1" value="Laki-laki">
-                        <label class="form-check-label" for="inlineRadio1">Laki-laki</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="jk" id="inlineRadio2" value="Perempuan">
-                        <label class="form-check-label" for="inlineRadio2">Perempuan</label>
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Pilih Jurusan</label>
-                    <select name="jurusan" class="form-control" id="">
-                        <option value="">-Pilih Jurusan-</option>
-
-                        @foreach ($jur as $item)
-                            <option value="{{$item->id}}">{{$item->jurusan}}</option>
-                        @endforeach
-
+                    <label class="form-label">Jenis Obat</label>
+                    <select name="jenis_obt" class="form-control" id="">
+                        <option value="">-Pilih-</option>
+                        <option value="Tablet">Tablet</option>
+                        <option value="Kapsul">Kapsul</option>
+                        <option value="Sirup">Sirup</option>
                     </select>
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Agama</label>
-                    <select name="agama" class="form-control" id="">
-                        <option value="">-Pilih Agama-</option>
-                        <option value="Islam">Islam</option>
-                        <option value="Kristen">Kristen</option>
-                        <option value="Katolik">Katolik</option>
-                        <option value="Hindu">Hindu</option>
-                        <option value="Budhha">Budhha</option>
-                        <option value="Konghucu">Konghucu</option>
-                    </select>
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Password</label>
-                    <input type="password" class="form-control" name="password">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Foto</label>
-                    <input type="file" class="form-control" name="foto" accept="image/*">
                 </div>
                 <button type="submit" class="btn btn-primary">Tambah Data</button>
             </form>
