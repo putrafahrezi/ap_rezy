@@ -15,21 +15,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-// Route::get('/master', function () {
-//     return view('master');
-// });
+Route::get('/', function () {
+    return view('/Auth/login');
+});
 
 Auth::routes();
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-//dasboard
-Route::get('/dasboard/', [DasboardController::class, 'index']);
+
+
 
 //dataobat
 Route::get('/dataobat/', [DataObatController::class, 'index']);
