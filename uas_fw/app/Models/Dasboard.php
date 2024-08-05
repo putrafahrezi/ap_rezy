@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class DataObat extends Model
+class Dasboard extends Model
 {
-    protected $table='dataobats';
+    protected $table='dasboards';
 }

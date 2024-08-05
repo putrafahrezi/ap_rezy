@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
  use App\Http\Controllers\DataObatController;
+ use App\Http\Controllers\DasboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,10 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+//dasboard
+Route::get('/dasboard/', [DasboardController::class, 'index']);
 
 //dataobat
 Route::get('/dataobat/', [DataObatController::class, 'index']);
