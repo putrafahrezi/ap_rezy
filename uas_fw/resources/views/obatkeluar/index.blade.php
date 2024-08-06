@@ -79,10 +79,10 @@
                     </tr>
                     </thead>
                     <tbody>
-                    @forelse ($do as $item)
+                    @forelse ($ok as $item)
                     <tr>
                     <td>{{$nomor++}}</td>
-                    <td>{{$item->kdobat}}</td>
+                    <td>{{$item->dataobats->kdobat}}</td>
                     <td>{{$item->namaobat}}</td>
                     <td>{{$item->harga}}</td>
                     <td>{{$item->jenis_obt}}</td>

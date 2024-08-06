@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
  use App\Http\Controllers\DataObatController;
+ use App\Http\Controllers\ObatKeluarController;
  use App\Http\Controllers\DasboardController;
 
 /*
@@ -24,10 +25,14 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-
-
-
 //dataobat
 Route::get('/dataobat/', [DataObatController::class, 'index']);
 Route::get('/dataobat/form/', [DataObatController::class, 'create']);
 Route::post('/dataobat/store/', [DataObatController::class, 'store']);
+
+//obatkeluar
+Route::get('/obatkeluar/', [ObatKeluarController::class, 'index']);
+Route::get('/obatkeluar/form/', [ObatKeluarController::class, 'create']);
+Route::post('/obatkeluar/store/', [ObatKeluarController::class, 'store']);
+
+

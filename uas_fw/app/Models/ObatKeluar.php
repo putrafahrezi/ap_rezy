@@ -6,10 +6,10 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class DataObat extends Model
+class ObatKeluar extends Model
 {
-    public function obatkeluars(): hasOne
+    public function dataobats(): hasOne
     {
-        return $this->hasOne(ObatKeluar::class, 'id', 'obatkeluars_id');
+        return $this->hasOne(DataObat::class, 'id', 'dataobats_id');
     }
 }

@@ -200,26 +200,27 @@
             </a>
           </li>
 
-
-          <li class="nav-item">
-            <a href="/obatmasuk/" class="nav-link">
-              <i class="nav-icon fas fa-building"></i>
-              <p>
-                Data Obat Masuk
-
-              </p>
-            </a>
-          </li>
-
           <li class="nav-item">
             <a href="/dataobat/" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
               <p>
-               data obat
+               data obat masuk
 
               </p>
             </a>
           </li>
+
+          <li class="nav-item">
+            <a href="/obatkeluar/" class="nav-link">
+              <i class="nav-icon fas fa-building"></i>
+              <p>
+                Data Obat keluar
+
+              </p>
+            </a>
+          </li>
+
+        
 
           
 
