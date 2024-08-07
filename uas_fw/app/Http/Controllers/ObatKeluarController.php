@@ -7,6 +7,7 @@ use App\Models\ObatKeluar;
 
 class ObatKeluarController extends Controller
 {
+    
       /**
      * Display a listing of the resource.
      */

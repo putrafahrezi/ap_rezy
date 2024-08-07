@@ -1,10 +1,10 @@
 @extends('layouts.master')
-@section('title','Data obat')
-@section('judul','Data obat')
+@section('title','Data obat keluar')
+@section('judul','Data obat keluar')
 @section('bc')
     <ol class="breadcrumb float-sm-right">
         <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item active">Data obat</li>
+        <li class="breadcrumb-item active">Data obat keluar</li>
     </ol>
 @endsection
 
@@ -50,10 +50,10 @@
     </script>
 @endsection
 
-                    @section('content')
-                    <div class="card">
-                    <div class="card-header">
-                    <a href="/dataobat/form/" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah Data</a>
+        @section('content')
+                        <div class="card">
+                        <div class="card-header">
+                        <a href="/obatkeluar/form/" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah Data</a>
 
                     <div class="card-tools">
                     <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -69,12 +69,11 @@
                     <thead>
                     <tr>
                     <th>Nomor</th>
-                    <th>Kode Obat</th>
-                    <th>Nama Obat</th>
-                    <th>Harga</th>
-                    <th>Jenis Obat</th>
-                    <th>Stok Awal</th>
-                    <th>Stok Akhir</th>
+                    <th>Kode obat</th>
+                    <th>Nama obat</th>
+                    <th>tanggal bayar</th>
+                    <th>jumlah</th>
+                    <th>status</th>
                     <th>Action</th>
                     </tr>
                     </thead>
@@ -84,10 +83,10 @@
                     <td>{{$nomor++}}</td>
                     <td>{{$item->kdobat}}</td>
                     <td>{{$item->namaobat}}</td>
-                    <td>{{$item->jenis_obt}}</td>
                     <td>{{$item->tgl_bayar}}</td>
                     <td>{{$item->jumlah}}</td>
                     <td>{{$item->status}}</td>
+                    
                     <td>
                         <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#detail{{$item->id}}">
                             <i class="fa fa-eye"></i>
@@ -106,27 +105,23 @@
 
                     <tbody>
                         <tr>
-                            <td>kode obat</td>
+                            <td>kode petugas</td>
                             <th scope="row">{{$item->kdobat}}</th>
                         </tr>
                         <tr>
-                            <td>Nama</td>
+                            <td>Nama petugas</td>
                             <th scope="row">{{$item->namaobat}}</th>
                         </tr>
                         <tr>
-                            <td>jenis_obt</td>
-                            <th scope="row">{{$item->jenis_obt}}</th>
-                        </tr>
-                        <tr>
-                            <td>tgl_bayar</td>
+                            <td>hanphone</td>
                             <th scope="row">{{$item->tgl_bayar}}</th>
                         </tr>
                         <tr>
-                            <td>Jumlah</td>
+                            <td>email</td>
                             <th scope="row">{{$item->jumlah}}</th>
                         </tr>
                         <tr>
-                            <td>status</td>
+                            <td>umur</td>
                             <th scope="row">{{$item->status}}</th>
                         </tr>
                     </tbody>

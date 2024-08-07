@@ -9,4 +9,3 @@ class petugas extends Model
 {
     protected $table = 'dataobats';
 }
-
