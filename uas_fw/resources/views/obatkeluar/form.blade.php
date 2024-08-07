@@ -24,34 +24,15 @@
         </div>
         </div>
         <div class="card-body">
-            <form method="post" action="/obatkeluar/store/" enctype="multipart/form-data">
+            <form method="post" action="/dataobat/store/" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
-                    <label class="form-label">Pilih Jurusan</label>
-                    <select name="kdobat" class="form-control" id="">
-                        <option value="">-Pilih Jurusan-</option>
-
-                        @foreach ($do as $item)
-                            <option value="{{$item->id}}">{{$item->kdobat}}</option>
-                        @endforeach
-
-                    </select>
+                    <label class="form-label">Kode Obat</label>
+                    <input type="text" class="form-control" name="kdobat">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Nama Obat</label>
                     <input type="text" class="form-control" name="namaobat">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Harga</label>
-                    <input type="number" class="form-control" name="harga">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Stok Awal</label>
-                    <input type="number" class="form-control" name="stok_awl">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Stok Sisa</label>
-                    <input type="number" class="form-control" name="stok_sisa">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Jenis Obat</label>
@@ -61,6 +42,18 @@
                         <option value="Kapsul">Kapsul</option>
                         <option value="Sirup">Sirup</option>
                     </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">tgl_bayar</label>
+                    <input type="number" class="form-control" name="tgl_bayar">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">jumlah</label>
+                    <input type="number" class="form-control" name="jumlah">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">status</label>
+                    <input type="number" class="form-control" name="status">
                 </div>
                 <button type="submit" class="btn btn-primary">Tambah Data</button>
             </form>

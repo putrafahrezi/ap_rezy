@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\DataObat;
-use App\Models\ObatKeluar;
 
 class DataObatController extends Controller
 {

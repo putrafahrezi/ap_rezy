@@ -7,6 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class petugas extends Model
 {
-    protected $table = 'dataobats';
+    protected $table = 'petugas';
 }
-

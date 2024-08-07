@@ -1,10 +1,10 @@
 @extends('layouts.master')
-@section('title','Data obat')
-@section('judul','Data obat')
+@section('title','Data petugas')
+@section('judul','Data petugas')
 @section('bc')
     <ol class="breadcrumb float-sm-right">
         <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item active">Data obat</li>
+        <li class="breadcrumb-item active">Data petugas</li>
     </ol>
 @endsection
 
@@ -50,10 +50,10 @@
     </script>
 @endsection
 
-                    @section('content')
-                    <div class="card">
-                    <div class="card-header">
-                    <a href="/dataobat/form/" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah Data</a>
+        @section('content')
+                        <div class="card">
+                        <div class="card-header">
+                        <a href="/petugas/form/" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah Data</a>
 
                     <div class="card-tools">
                     <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -69,12 +69,12 @@
                     <thead>
                     <tr>
                     <th>Nomor</th>
-                    <th>Kode Obat</th>
-                    <th>Nama Obat</th>
-                    <th>Harga</th>
-                    <th>Jenis Obat</th>
-                    <th>Stok Awal</th>
-                    <th>Stok Akhir</th>
+                    <th>Kode petugas</th>
+                    <th>Nama petugas</th>
+                    <th>hp</th>
+                    <th>email</th>
+                    <th>umur</th>
+                    <th>alamat</th>
                     <th>Action</th>
                     </tr>
                     </thead>
@@ -82,12 +82,13 @@
                     @forelse ($ptg as $item)
                     <tr>
                     <td>{{$nomor++}}</td>
-                    <td>{{$item->kdobat}}</td>
-                    <td>{{$item->namaobat}}</td>
-                    <td>{{$item->harga}}</td>
-                    <td>{{$item->jenis_obt}}</td>
-                    <td>{{$item->stok_awl}}</td>
-                    <td>{{$item->stok_sisa}}</td>
+                    <td>{{$item->kdpetugas}}</td>
+                    <td>{{$item->namapetugas}}</td>
+                    <td>{{$item->hp}}</td>
+                    <td>{{$item->email}}</td>
+                    <td>{{$item->umur}}</td>
+                    <td>{{$item->alamat}}</td>
+                    
                     <td>
                         <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#detail{{$item->id}}">
                             <i class="fa fa-eye"></i>
@@ -106,28 +107,28 @@
 
                     <tbody>
                         <tr>
-                            <td>NIM</td>
-                            <th scope="row">{{$item->kdobat}}</th>
+                            <td>kode petugas</td>
+                            <th scope="row">{{$item->kdpetugas}}</th>
                         </tr>
                         <tr>
-                            <td>Nama</td>
-                            <th scope="row">{{$item->namaobat}}</th>
+                            <td>Nama petugas</td>
+                            <th scope="row">{{$item->namapetugas}}</th>
                         </tr>
                         <tr>
-                            <td>Tempat Lahir</td>
-                            <th scope="row">{{$item->harga}}</th>
+                            <td>hanphone</td>
+                            <th scope="row">{{$item->hp}}</th>
                         </tr>
                         <tr>
-                            <td>Tanggal Lahir</td>
-                            <th scope="row">{{$item->jenis_obt}}</th>
+                            <td>email</td>
+                            <th scope="row">{{$item->email}}</th>
                         </tr>
                         <tr>
-                            <td>Alamat</td>
-                            <th scope="row">{{$item->stok_awl}}</th>
+                            <td>umur</td>
+                            <th scope="row">{{$item->umur}}</th>
                         </tr>
                         <tr>
-                            <td>Jenis Kelamin</td>
-                            <th scope="row">{{$item->stok_sisa}}</th>
+                            <td>alamat</td>
+                            <th scope="row">{{$item->alamat}}</th>
                         </tr>
                     </tbody>
                     </table>

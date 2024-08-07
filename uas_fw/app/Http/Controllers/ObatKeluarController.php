@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\ObatKeluar;
-use App\Models\DataObat;
 
 class ObatKeluarController extends Controller
 {
@@ -23,8 +22,8 @@ class ObatKeluarController extends Controller
      */
     public function create()
     {
-        $do = DataObat::all();
-        return view('obatkeluar.form',compact('do'));
+        $ok = ObatKeluar::all();
+        return view('obatkeluar.form',compact('ok'));
     }
 
     /**
@@ -33,7 +32,7 @@ class ObatKeluarController extends Controller
     public function store(Request $request)
     {
         $ok = new ObatKeluar;
-        $ok->dataobats_id = $request->kdobat;
+        $ok->kdobat = $request->kdobat;
         $ok->namaobat = $request->namaobat;
         $ok->jenis_obt = $request->jenis_obt;
         $ok->tgl_bayar = $request->tgl_bayar;

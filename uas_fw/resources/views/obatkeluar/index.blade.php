@@ -82,12 +82,12 @@
                     @forelse ($ok as $item)
                     <tr>
                     <td>{{$nomor++}}</td>
-                    <td>{{$item->dataobats->kdobat}}</td>
+                    <td>{{$item->kdobat}}</td>
                     <td>{{$item->namaobat}}</td>
-                    <td>{{$item->harga}}</td>
                     <td>{{$item->jenis_obt}}</td>
-                    <td>{{$item->stok_awl}}</td>
-                    <td>{{$item->stok_sisa}}</td>
+                    <td>{{$item->tgl_bayar}}</td>
+                    <td>{{$item->jumlah}}</td>
+                    <td>{{$item->status}}</td>
                     <td>
                         <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#detail{{$item->id}}">
                             <i class="fa fa-eye"></i>
@@ -106,7 +106,7 @@
 
                     <tbody>
                         <tr>
-                            <td>NIM</td>
+                            <td>kode obat</td>
                             <th scope="row">{{$item->kdobat}}</th>
                         </tr>
                         <tr>
@@ -114,20 +114,20 @@
                             <th scope="row">{{$item->namaobat}}</th>
                         </tr>
                         <tr>
-                            <td>Tempat Lahir</td>
-                            <th scope="row">{{$item->harga}}</th>
-                        </tr>
-                        <tr>
-                            <td>Tanggal Lahir</td>
+                            <td>jenis_obt</td>
                             <th scope="row">{{$item->jenis_obt}}</th>
                         </tr>
                         <tr>
-                            <td>Alamat</td>
-                            <th scope="row">{{$item->stok_awl}}</th>
+                            <td>tgl_bayar</td>
+                            <th scope="row">{{$item->tgl_bayar}}</th>
                         </tr>
                         <tr>
-                            <td>Jenis Kelamin</td>
-                            <th scope="row">{{$item->stok_sisa}}</th>
+                            <td>Jumlah</td>
+                            <th scope="row">{{$item->jumlah}}</th>
+                        </tr>
+                        <tr>
+                            <td>status</td>
+                            <th scope="row">{{$item->status}}</th>
                         </tr>
                     </tbody>
                     </table>

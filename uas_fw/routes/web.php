@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
  use App\Http\Controllers\DataObatController;
  use App\Http\Controllers\ObatKeluarController;
+ use App\Http\Controllers\PetugasController;
  use App\Http\Controllers\DasboardController;
 
 /*
@@ -34,5 +35,11 @@ Route::post('/dataobat/store/', [DataObatController::class, 'store']);
 Route::get('/obatkeluar/', [ObatKeluarController::class, 'index']);
 Route::get('/obatkeluar/form/', [ObatKeluarController::class, 'create']);
 Route::post('/obatkeluar/store/', [ObatKeluarController::class, 'store']);
+
+//petugas
+Route::get('/petugas/', [PetugasController::class, 'index']);
+Route::get('/petugas/form/', [PetugasController::class, 'create']);
+Route::post('/petugas/store/', [PetugasController::class, 'store']);
+
 
 
