@@ -32,12 +32,13 @@ class DataObatController extends Controller
     public function store(Request $request)
     {
         $do = new DataObat;
-        $do->kdobat = $request->kdobat;
+      
         $do->namaobat = $request->namaobat;
+        $do->tanggal = $request->tanggal;
+        $do->jumlah = $request->jumlah;
         $do->jenis_obt = $request->jenis_obt;
-        $do->harga = $request->harga;
-        $do->stok_awl = $request->stok_awl;
-        $do->stok_sisa = $request->stok_sisa;
+        $do->ed = $request->ed;
+        $do->keterangan = $request->keterangan;
         $do->save();
 
 

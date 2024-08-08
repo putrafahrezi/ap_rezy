@@ -13,13 +13,12 @@ return new class extends Migration
     {
         Schema::create('obatkeluars', function (Blueprint $table) {
             $table->id();
-            $table->string('kdobat');
-            $table->string('namaobat');
-            $table->string('jenis_obt');
-            $table->string('tgl_bayar');
+            $table->string('namaobat')->unique();;
+            $table->string('tanggal');
             $table->string('jumlah');
-            $table->string('status');
-
+            $table->string('jenis_obt');
+            $table->string('ed');
+            $table->string('keterangan');
             $table->timestamps();
         });
     }

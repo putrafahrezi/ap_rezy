@@ -1,11 +1,11 @@
 @extends('layouts.master')
-@section('title','Tambah obat keluar')
-@section('judul','Tambah obat keluar')
+@section('title','Tambah stok')
+@section('judul','Tambah stok')
 @section('bc')
     <ol class="breadcrumb float-sm-right">
         <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item"><a href="#">Data obat keluar</a></li>
-        <li class="breadcrumb-item active">Tambah obat keluar</li>
+        <li class="breadcrumb-item"><a href="#">Data stok</a></li>
+        <li class="breadcrumb-item active">Tambah stok</li>
     </ol>
 @endsection
 
@@ -24,19 +24,12 @@
         </div>
         </div>
         <div class="card-body">
-            <form method="post" action="/obatkeluar/store/" enctype="multipart/form-data">
+            <form method="post" action="/stokobat/store/" enctype="multipart/form-data">
                 @csrf
+                
                 <div class="mb-3">
                     <label class="form-label">Nama Obat</label>
                     <input type="text" class="form-control" name="namaobat">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">tanggal</label>
-                    <input type="date" class="form-control" name="tanggal">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">jumlah</label>
-                    <input type="number" class="form-control" name="jumlah">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Jenis Obat</label>
@@ -48,14 +41,13 @@
                     </select>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">ed</label>
-                    <input type="date" class="form-control" name="ed">
+                    <label class="form-label">stok</label>
+                    <input type="text" class="form-control" name="stok">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">keterangan</label>
                     <input type="text" class="form-control" name="keterangan">
                 </div>
-                
                 
                 <button type="submit" class="btn btn-primary">Tambah Data</button>
             </form>

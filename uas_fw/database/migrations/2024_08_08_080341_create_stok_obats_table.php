@@ -11,14 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('dataobats', function (Blueprint $table) {
+        Schema::create('stok_obats', function (Blueprint $table) {
             $table->id();
-            $table->string('kdobat');
-            $table->string('namaobat');
-            $table->string('jenis_obt');
-            $table->string('harga');
-            $table->string('stok_awl');
-            $table->string('stok_sisa');
             $table->timestamps();
         });
     }
@@ -28,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('dataobats');
+        Schema::dropIfExists('stok_obats');
     }
 };

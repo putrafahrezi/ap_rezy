@@ -33,12 +33,12 @@ class ObatKeluarController extends Controller
     public function store(Request $request)
     {
         $ok = new ObatKeluar;
-        $ok->kdobat = $request->kdobat;
         $ok->namaobat = $request->namaobat;
-        $ok->jenis_obt = $request->jenis_obt;
-        $ok->tgl_bayar = $request->tgl_bayar;
+        $ok->tanggal = $request->tanggal;
         $ok->jumlah = $request->jumlah;
-        $ok->status = $request->status;
+        $ok->jenis_obt = $request->jenis_obt;
+        $ok->ed = $request->ed;
+        $ok->keterangan = $request->keterangan;
         $ok->save();
 
 

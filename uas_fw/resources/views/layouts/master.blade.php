@@ -201,6 +201,43 @@
           </li>
 
           <li class="nav-item">
+            <a href="/stokobat/" class="nav-link">
+              <i class="nav-icon fas fa-building"></i>
+              <p>
+                stock obat
+
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+                    <a href="#" class="nav-link">
+                    <i class="nav-icon fas fa-calendar-alt"></i>
+                    <p>
+                        Transaksi
+                        <i class="right fas fa-angle-left"></i>
+                    </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="/dataobat/"class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>data obat masuk</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/obatkeluar/" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Data Obat keluar</p>
+                        </a>
+                    </li>
+                    </ul>
+                </li>
+
+
+
+
+         {{-- <!-- <li class="nav-item">
             <a href="/dataobat/" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
               <p>
@@ -218,13 +255,9 @@
 
               </p>
             </a>
-          </li>
+          </li> -->
+          --}}
 
-<!-- Sidebar Menu -->
-      <nav class="mt-3">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
           <li class="nav-item">
             <a href="/petugas/" class="nav-link">
               <i class="nav-icon fas fa-building"></i>

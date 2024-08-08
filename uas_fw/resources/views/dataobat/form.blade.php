@@ -26,25 +26,18 @@
         <div class="card-body">
             <form method="post" action="/dataobat/store/" enctype="multipart/form-data">
                 @csrf
-                <div class="mb-3">
-                    <label class="form-label">Kode Obat</label>
-                    <input type="text" class="form-control" name="kdobat">
-                </div>
+                
                 <div class="mb-3">
                     <label class="form-label">Nama Obat</label>
                     <input type="text" class="form-control" name="namaobat">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Harga</label>
-                    <input type="number" class="form-control" name="harga">
+                    <label class="form-label">tanggal</label>
+                    <input type="date" class="form-control" name="tanggal">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Stok Awal</label>
-                    <input type="number" class="form-control" name="stok_awl">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Stok Sisa</label>
-                    <input type="number" class="form-control" name="stok_sisa">
+                    <label class="form-label">jumlah</label>
+                    <input type="number" class="form-control" name="jumlah">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Jenis Obat</label>
@@ -55,6 +48,15 @@
                         <option value="Sirup">Sirup</option>
                     </select>
                 </div>
+                <div class="mb-3">
+                    <label class="form-label">ed</label>
+                    <input type="date" class="form-control" name="ed">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">keterangan</label>
+                    <input type="text" class="form-control" name="keterangan">
+                </div>
+                
                 <button type="submit" class="btn btn-primary">Tambah Data</button>
             </form>
         </div>

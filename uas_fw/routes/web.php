@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
  use App\Http\Controllers\DataObatController;
  use App\Http\Controllers\ObatKeluarController;
+ use App\Http\Controllers\StokObatController;
  use App\Http\Controllers\PetugasController;
  use App\Http\Controllers\DasboardController;
 
@@ -25,8 +26,13 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+//stokobat
+Route::get('/stokobat/', [StokObatController::class, 'index']);
+Route::get('/stokobat/form/', [StokObatController::class, 'create']);
+Route::post('/stokobat/store/', [StokObatController::class, 'store']);
 
-//dataobat
+
+//obatmasuk
 Route::get('/dataobat/', [DataObatController::class, 'index']);
 Route::get('/dataobat/form/', [DataObatController::class, 'create']);
 Route::post('/dataobat/store/', [DataObatController::class, 'store']);

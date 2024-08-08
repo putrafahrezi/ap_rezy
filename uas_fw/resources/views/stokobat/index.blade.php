@@ -1,10 +1,10 @@
 @extends('layouts.master')
-@section('title','Data obat keluar')
-@section('judul','Data obat keluar')
+@section('title','Data stok')
+@section('judul','Data stok')
 @section('bc')
     <ol class="breadcrumb float-sm-right">
         <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item active">Data obat keluar</li>
+        <li class="breadcrumb-item active">Data stok</li>
     </ol>
 @endsection
 
@@ -50,10 +50,10 @@
     </script>
 @endsection
 
-        @section('content')
-                        <div class="card">
-                        <div class="card-header">
-                        <a href="/obatkeluar/form/" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah Data</a>
+                    @section('content')
+                    <div class="card">
+                    <div class="card-header">
+                    <a href="/stokobat/form/" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah Data</a>
 
                     <div class="card-tools">
                     <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -68,25 +68,24 @@
                     <table id="example1" class="table table-bordered table-striped">
                     <thead>
                     <tr>
+                    <th>Nomor</th>
+                    
                     <th>Nama Obat</th>
-                    <th>tanggal</th>
-                    <th>jumlah</th>
                     <th>Jenis Obat</th>
-                    <th>ed</th>
+                    <th>stok</th>
                     <th>keterangan</th>
                     <th>Action</th>
                     </tr>
                     </thead>
                     <tbody>
-                    @forelse ($ok as $item)
+                    @forelse ($so as $item)
                     <tr>
-                    <td>{{$item->namaobat}}</td>
-                    <td>{{$item->tanggal}}</td>
-                    <td>{{$item->jumlah}}</td>
-                    <td>{{$item->jenis_obt}}</td>
-                    <td>{{$item->ed}}</td>
-                    <td>{{$item->keterangan}}</td>
+                    <td>{{$nomor++}}</td>
                     
+                    <td>{{$item->namaobat}}</td>
+                    <td>{{$item->jenis_obt}}</td>
+                    <td>{{$item->stok}}</td>
+                    <td>{{$item->keterangan}}</td>
                     <td>
                         <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#detail{{$item->id}}">
                             <i class="fa fa-eye"></i>
@@ -104,17 +103,10 @@
                     <table class="table">
 
                     <tbody>
-                    <tr>
+                       
+                        <tr>
                             <td>Nama</td>
                             <th scope="row">{{$item->namaobat}}</th>
-                        </tr>
-                        <tr>
-                            <td>Tempat Lahir</td>
-                            <th scope="row">{{$item->tanggal}}</th>
-                        </tr>
-                        <tr>
-                            <td>Tanggal Lahir</td>
-                            <th scope="row">{{$item->jumlah}}</th>
                         </tr>
                         <tr>
                             <td>Alamat</td>
@@ -122,7 +114,7 @@
                         </tr>
                         <tr>
                             <td>Jenis Kelamin</td>
-                            <th scope="row">{{$item->ed}}</th>
+                            <th scope="row">{{$item->stok}}</th>
                         </tr>
                         <tr>
                             <td>Jenis Kelamin</td>
@@ -154,7 +146,7 @@
                     <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                    Yakin ingin menghapus data <b>{{$item->kdobat}}</b>?
+                    Yakin ingin menghapus data jurusan <b>{{$item->jurusan}}</b>?
                     </div>
                     <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
