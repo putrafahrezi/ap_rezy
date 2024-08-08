@@ -234,29 +234,16 @@
                     </ul>
                 </li>
 
-
-
-
-         {{-- <!-- <li class="nav-item">
-            <a href="/dataobat/" class="nav-link">
-              <i class="nav-icon fas fa-users"></i>
+      
+          <li class="nav-item">
+            <a href="/suplier/" class="nav-link">
+              <i class="nav-icon fas fa-building"></i>
               <p>
-               data obat masuk
+                suplier
 
               </p>
             </a>
           </li>
-
-          <li class="nav-item">
-            <a href="/obatkeluar/" class="nav-link">
-              <i class="nav-icon fas fa-building"></i>
-              <p>
-                Data Obat keluar
-
-              </p>
-            </a>
-          </li> -->
-          --}}
 
           <li class="nav-item">
             <a href="/petugas/" class="nav-link">

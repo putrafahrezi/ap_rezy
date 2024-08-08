@@ -11,13 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('petugas', function (Blueprint $table) {
+        Schema::create('supliers', function (Blueprint $table) {
             $table->id();
-            $table->string('kdpetugas')->unique();;
-            $table->string('namapetugas');
+            $table->string('kdsuplier')->unique();;
+            $table->string('namasuplier');
             $table->string('hp');
-            $table->string('email');
-            $table->string('umur');
             $table->string('alamat');
             $table->timestamps();
         });
@@ -28,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('petugas');
+        Schema::dropIfExists('supliers');
     }
 };

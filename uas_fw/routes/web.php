@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
  use App\Http\Controllers\ObatKeluarController;
  use App\Http\Controllers\StokObatController;
  use App\Http\Controllers\PetugasController;
+ use App\Http\Controllers\SuplierController;
  use App\Http\Controllers\DasboardController;
 
 /*
@@ -46,6 +47,11 @@ Route::post('/obatkeluar/store/', [ObatKeluarController::class, 'store']);
 Route::get('/petugas/', [PetugasController::class, 'index']);
 Route::get('/petugas/form/', [PetugasController::class, 'create']);
 Route::post('/petugas/store/', [PetugasController::class, 'store']);
+
+//suplier
+Route::get('/suplier/', [SuplierController::class, 'index']);
+Route::get('/suplier/form/', [SuplierController::class, 'create']);
+Route::post('/suplier/store/', [SuplierController::class, 'store']);
 
 
 
