@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('namaobat')->unique();;
             $table->string('jenis_obt');
             $table->string('stok');
+            $table->string('namapetugas');
             $table->string('keterangan');
             $table->timestamps();
         });

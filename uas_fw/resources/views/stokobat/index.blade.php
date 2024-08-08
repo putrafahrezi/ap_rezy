@@ -73,6 +73,7 @@
                     <th>Nama Obat</th>
                     <th>Jenis Obat</th>
                     <th>stok</th>
+                    <th>Nama petugas</th>
                     <th>keterangan</th>
                     <th>Action</th>
                     </tr>
@@ -85,6 +86,7 @@
                     <td>{{$item->namaobat}}</td>
                     <td>{{$item->jenis_obt}}</td>
                     <td>{{$item->stok}}</td>
+                    <td>{{$item->namapetugas}}</td>
                     <td>{{$item->keterangan}}</td>
                     <td>
                         <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#detail{{$item->id}}">
@@ -113,11 +115,15 @@
                             <th scope="row">{{$item->jenis_obt}}</th>
                         </tr>
                         <tr>
-                            <td>Jenis Kelamin</td>
+                            <td>stok</td>
                             <th scope="row">{{$item->stok}}</th>
                         </tr>
                         <tr>
-                            <td>Jenis Kelamin</td>
+                            <td>Nama petugas</td>
+                            <th scope="row">{{$item->namapetugas}}</th>
+                        </tr>
+                        <tr>
+                            <td>keterangan</td>
                             <th scope="row">{{$item->keterangan}}</th>
                         </tr>
                     </tbody>

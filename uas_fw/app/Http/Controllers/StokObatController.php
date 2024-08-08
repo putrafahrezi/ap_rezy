@@ -36,6 +36,7 @@ class StokObatController extends Controller
         $so->namaobat = $request->namaobat;
         $so->jenis_obt = $request->jenis_obt;
         $so->stok = $request->stok;
+        $so->namapetugas = $request->namapetugas;
         $so->keterangan = $request->keterangan;
         $so->save();
 

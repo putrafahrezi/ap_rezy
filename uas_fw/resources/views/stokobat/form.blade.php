@@ -45,6 +45,10 @@
                     <input type="text" class="form-control" name="stok">
                 </div>
                 <div class="mb-3">
+                    <label class="form-label">Nama petugas</label>
+                    <input type="text" class="form-control" name="namapetugas">
+                </div>
+                <div class="mb-3">
                     <label class="form-label">keterangan</label>
                     <input type="text" class="form-control" name="keterangan">
                 </div>
