@@ -34,7 +34,7 @@
                 <div class="mb-3">
                     <label class="form-label">Jenis Obat</label>
                     <select name="jenis_obt" class="form-control" id="">
-                        <option value="">-Pilih-</option>
+                        <option hidden value="">-Pilih-</option>
                         <option value="Tablet">Tablet</option>
                         <option value="Kapsul">Kapsul</option>
                         <option value="Sirup">Sirup</option>
@@ -46,7 +46,12 @@
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Nama petugas</label>
-                    <input type="text" class="form-control" name="namapetugas">
+                    <select name="petugas" class="form-control" id="">
+                                <option hidden value="">-Pilih Petugas-</option>
+                                @foreach ($ptg as $item)
+                                    <option value="{{$item->id}}">{{$item->namapetugas}}</option>
+                                @endforeach
+                            </select>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">keterangan</label>

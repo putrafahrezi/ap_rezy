@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\DataObat;
+use App\Models\StokObat;
+use App\Models\Suplier;
 
 class DataObatController extends Controller
 {
@@ -22,8 +24,9 @@ class DataObatController extends Controller
      */
     public function create()
     {
-        $do = DataObat::all();
-        return view('dataobat.form',compact('do'));
+        $sto = StokObat::all();
+        $sp  = Suplier::all();
+        return view('dataobat.form',compact('sto','sp'));
     }
 
     /**
@@ -33,10 +36,11 @@ class DataObatController extends Controller
     {
         $do = new DataObat;
       
-        $do->namaobat = $request->namaobat;
+        $do->stokobats_id = $request->namaobat;
         $do->tanggal = $request->tanggal;
         $do->jumlah = $request->jumlah;
         $do->jenis_obt = $request->jenis_obt;
+        $do->suppliers_id = $request->splr;
         $do->ed = $request->ed;
         $do->keterangan = $request->keterangan;
         $do->save();

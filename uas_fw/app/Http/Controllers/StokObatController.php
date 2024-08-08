@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\StokObat;
+use App\Models\Petugas;
 
 class StokObatController extends Controller
 {
@@ -23,7 +24,8 @@ class StokObatController extends Controller
     public function create()
     {
         $so = StokObat::all();
-        return view('stokobat.form',compact('so'));
+        $ptg = Petugas::all();
+        return view('stokobat.form',compact('so','ptg'));
     }
 
     /**
@@ -36,7 +38,7 @@ class StokObatController extends Controller
         $so->namaobat = $request->namaobat;
         $so->jenis_obt = $request->jenis_obt;
         $so->stok = $request->stok;
-        $so->namapetugas = $request->namapetugas;
+        $so->petugas_id = $request->petugas;
         $so->keterangan = $request->keterangan;
         $so->save();
 

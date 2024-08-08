@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Suplier extends Model
 {
     protected $table = 'supliers';
+
+    public function dataobats():BelongTo{
+        return $this->belongTo(DataObat::class);
+    }
 }

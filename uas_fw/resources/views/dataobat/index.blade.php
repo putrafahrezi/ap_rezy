@@ -74,6 +74,7 @@
                     <th>tanggal</th>
                     <th>jumlah</th>
                     <th>Jenis Obat</th>
+                    <th>Suplier</th>
                     <th>ed</th>
                     <th>keterangan</th>
                     <th>Action</th>
@@ -84,10 +85,11 @@
                     <tr>
                     <td>{{$nomor++}}</td>
                     
-                    <td>{{$item->namaobat}}</td>
+                    <td>{{$item->stokobats->namaobat}}</td>
                     <td>{{$item->tanggal}}</td>
                     <td>{{$item->jumlah}}</td>
                     <td>{{$item->jenis_obt}}</td>
+                    <td>{{$item->supliers->namasuplier}}</td>
                     <td>{{$item->ed}}</td>
                     <td>{{$item->keterangan}}</td>
                     <td>
@@ -110,7 +112,7 @@
                        
                         <tr>
                             <td>Nama</td>
-                            <th scope="row">{{$item->namaobat}}</th>
+                            <th scope="row">{{$item->stokobats->namaobat}}</th>
                         </tr>
                         <tr>
                             <td>Tempat Lahir</td>
@@ -123,6 +125,10 @@
                         <tr>
                             <td>Alamat</td>
                             <th scope="row">{{$item->jenis_obt}}</th>
+                        </tr>
+                        <tr>
+                            <td>Suplier</td>
+                            <th scope="row">{{$item->supliers->namasuplier}}</th>
                         </tr>
                         <tr>
                             <td>Jenis Kelamin</td>

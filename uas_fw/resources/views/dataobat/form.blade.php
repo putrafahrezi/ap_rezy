@@ -29,7 +29,12 @@
                 
                 <div class="mb-3">
                     <label class="form-label">Nama Obat</label>
-                    <input type="text" class="form-control" name="namaobat">
+                    <select name="namaobat" class="form-control" id="">
+                                <option value="">-Pilih Obat-</option>
+                                @foreach ($sto as $item)
+                                    <option value="{{$item->id}}">{{$item->namaobat}}</option>
+                                @endforeach
+                            </select>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">tanggal</label>
@@ -47,6 +52,15 @@
                         <option value="Kapsul">Kapsul</option>
                         <option value="Sirup">Sirup</option>
                     </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Suplier</label>
+                    <select name="splr" class="form-control" id="">
+                                <option value="">-Pilih Suplier-</option>
+                                @foreach ($sp as $item)
+                                    <option value="{{$item->id}}">{{$item->namasuplier}}</option>
+                                @endforeach
+                            </select>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">ed</label>

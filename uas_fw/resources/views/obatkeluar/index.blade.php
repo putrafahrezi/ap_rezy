@@ -80,7 +80,7 @@
                     <tbody>
                     @forelse ($ok as $item)
                     <tr>
-                    <td>{{$item->namaobat}}</td>
+                    <td>{{$item->stokobats->namaobat}}</td>
                     <td>{{$item->tanggal}}</td>
                     <td>{{$item->jumlah}}</td>
                     <td>{{$item->jenis_obt}}</td>
@@ -106,7 +106,7 @@
                     <tbody>
                     <tr>
                             <td>Nama</td>
-                            <th scope="row">{{$item->namaobat}}</th>
+                            <th scope="row">{{$item->stokobats->namaobat}}</th>
                         </tr>
                         <tr>
                             <td>Tempat Lahir</td>

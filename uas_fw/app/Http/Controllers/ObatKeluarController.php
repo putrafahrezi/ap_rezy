@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\ObatKeluar;
+use App\Models\StokObat;
 
 class ObatKeluarController extends Controller
 {
@@ -24,7 +25,8 @@ class ObatKeluarController extends Controller
     public function create()
     {
         $ok = ObatKeluar::all();
-        return view('obatkeluar.form',compact('ok'));
+        $sto = StokObat::all();
+        return view('obatkeluar.form',compact('ok','sto'));
     }
 
     /**
@@ -33,7 +35,7 @@ class ObatKeluarController extends Controller
     public function store(Request $request)
     {
         $ok = new ObatKeluar;
-        $ok->namaobat = $request->namaobat;
+        $ok->stokobats_id = $request->namaobat;
         $ok->tanggal = $request->tanggal;
         $ok->jumlah = $request->jumlah;
         $ok->jenis_obt = $request->jenis_obt;

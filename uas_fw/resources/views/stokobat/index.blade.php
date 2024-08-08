@@ -86,7 +86,7 @@
                     <td>{{$item->namaobat}}</td>
                     <td>{{$item->jenis_obt}}</td>
                     <td>{{$item->stok}}</td>
-                    <td>{{$item->namapetugas}}</td>
+                    <td>{{$item->petugas->namapetugas}}</td>
                     <td>{{$item->keterangan}}</td>
                     <td>
                         <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#detail{{$item->id}}">
