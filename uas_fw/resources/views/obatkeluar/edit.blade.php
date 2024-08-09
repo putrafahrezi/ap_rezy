@@ -2,7 +2,11 @@
 @section('title','Edit Obat keluar')
 @section('judul','Edit Obat keluar')
 @section('heading','Edit Obat keluar')
-
+@section('bc')
+    <ol class="breadcrumb float-sm-right">
+        <li class="breadcrumb-item"><a href="/obatkeluar/">Data Obat Keluar</a></li>
+    </ol>
+@endsection
 
 
 @section('content')
@@ -26,6 +30,23 @@
                 @method('PUT')
                 @csrf
                 <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Nama Obat</label>
+                    <select name="namaobat" class="form-control" id="">
+                        <option hidden value="{{$ok->stokobats_id}}">{{$ok->stokobats->namaobat}}</option>
+                        @foreach ($sto as $item)
+                            <option value="{{$item->id}}">{{$item->namaobat}}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Tanggal</label>
+                    <input type="date" name="tanggal" value="{{$ok->tanggal}}" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Jumlah</label>
+                    <input type="text" name="jumlah" value="{{$ok->jumlah}}" class="form-control">
+                </div>
+                <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Jenis Obat</label>
                     <select class="form-control" id="type" name="jenis_obt">
                         <option hidden value=""></option>
@@ -36,29 +57,12 @@
 
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Tanggal</label>
-                    <input type="date" name="tanggal" value="{{$ok->tanggal}}" class="form-control">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">ED</label>
+                    <label for="exampleInputPassword1" class="form-label">Expire Date</label>
                     <input type="date" name="ed" value="{{$ok->ed}}" class="form-control">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Nama Obat</label>
-                    <select name="namaobat" class="form-control" id="">
-                        <option hidden value="{{$ok->stokobats_id}}">{{$ok->stokobats->namaobat}}</option>
-                        @foreach ($sto as $item)
-                            <option value="{{$item->id}}">{{$item->namaobat}}</option>
-                        @endforeach
-                    </select>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Keterangan</label>
                     <input type="text" name="keterangan" value="{{$ok->keterangan}}" class="form-control">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Jumlah</label>
-                    <input type="text" name="jumlah" value="{{$ok->jumlah}}" class="form-control">
                 </div>
 
                 <button type="submit" class="btn btn-primary">Edit Data</button>

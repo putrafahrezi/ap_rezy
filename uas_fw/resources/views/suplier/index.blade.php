@@ -71,7 +71,7 @@
                     <th>Nomor</th>
                     <th>Kode suplier</th>
                     <th>Nama suplier</th>
-                    <th>hp</th>
+                    <th>handphone</th>
                     <th>alamat</th>
                     <th>Action</th>
                     </tr>
@@ -111,7 +111,7 @@
                             <th scope="row">{{$item->namasuplier}}</th>
                         </tr>
                         <tr>
-                            <td>hanphone</td>
+                            <td>handphone</td>
                             <th scope="row">{{$item->hp}}</th>
                         </tr>
                         <tr>

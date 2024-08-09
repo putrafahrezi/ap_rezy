@@ -26,6 +26,23 @@
                 @method('PUT')
                 @csrf
                 <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Nama Obat</label>
+                    <select name="splr" class="form-control" id="">
+                        <option hidden value="{{$do->stokobats_id}}">{{$do->stokobats->namaobat}}</option>
+                        @foreach ($sto as $item)
+                            <option value="{{$item->id}}">{{$item->namaobat}}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Tanggal</label>
+                    <input type="date" name="tanggal" value="{{$do->tanggal}}" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Jumlah</label>
+                    <input type="text" name="jumlah" value="{{$do->jumlah}}" class="form-control">
+                </div>
+                <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Jenis Obat</label>
                     <select class="form-control" id="type" name="jenis_obt">
                         <option hidden value=""></option>
@@ -34,23 +51,6 @@
                         <option value="Sirup" {{ $do->  jenis_obt == 'Sirup' ? 'selected' : '' }}>Sirup</option>
                     </select>
 
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Tanggal</label>
-                    <input type="date" name="tanggal" value="{{$do->tanggal}}" class="form-control">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">ED</label>
-                    <input type="date" name="ed" value="{{$do->ed}}" class="form-control">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Nama Obat</label>
-                    <select name="namaobat" class="form-control" id="">
-                        <option hidden value="{{$do->stokobats_id}}">{{$do->stokobats->namaobat}}</option>
-                        @foreach ($sto as $item)
-                            <option value="{{$item->id}}">{{$item->namaobat}}</option>
-                        @endforeach
-                    </select>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Suplier</label>
@@ -62,13 +62,14 @@
                     </select>
                 </div>
                 <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">ED</label>
+                    <input type="date" name="ed" value="{{$do->ed}}" class="form-control">
+                </div>
+                <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Keterangan</label>
                     <input type="text" name="keterangan" value="{{$do->keterangan}}" class="form-control">
                 </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Jumlah</label>
-                    <input type="text" name="jumlah" value="{{$do->jumlah}}" class="form-control">
-                </div>
+               
 
                 <button type="submit" class="btn btn-primary">Edit Data</button>
             </form>

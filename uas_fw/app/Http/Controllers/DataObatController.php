@@ -64,7 +64,7 @@ class DataObatController extends Controller
         $do->tanggal = $request->tanggal;
         $do->jumlah = $request->jumlah;
         $do->jenis_obt = $request->jenis_obt;
-        $do->suppliers_id = $request->splr;
+        $do->supliers_id = $request->splr;
         $do->ed = $request->ed;
         $do->keterangan = $request->keterangan;
         $do->save();

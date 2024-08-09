@@ -71,7 +71,7 @@
                     <th>Nomor</th>
                     <th>Kode petugas</th>
                     <th>Nama petugas</th>
-                    <th>hp</th>
+                    <th>handphone</th>
                     <th>email</th>
                     <th>umur</th>
                     <th>alamat</th>
