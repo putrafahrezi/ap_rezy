@@ -3,7 +3,7 @@
 @section('judul','Data obat keluar')
 @section('bc')
     <ol class="breadcrumb float-sm-right">
-        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item"><a href="/home/">Home</a></li>
         <li class="breadcrumb-item active">Data obat keluar</li>
     </ol>
 @endsection
@@ -69,11 +69,10 @@
                     <thead>
                     <tr>
                     <th>Nama Obat</th>
-                    <th>tanggal</th>
-                    <th>jumlah</th>
+                    <th>Tanggal</th>
+                    <th>Jumlah</th>
                     <th>Jenis Obat</th>
-                    <th>ed</th>
-                    <th>keterangan</th>
+                    <th>Expire Date</th>
                     <th>Action</th>
                     </tr>
                     </thead>
@@ -85,7 +84,6 @@
                     <td>{{$item->jumlah}}</td>
                     <td>{{$item->jenis_obt}}</td>
                     <td>{{$item->ed}}</td>
-                    <td>{{$item->keterangan}}</td>
                     
                     <td>
                         <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#detail{{$item->id}}">
@@ -109,23 +107,23 @@
                             <th scope="row">{{$item->stokobats->namaobat}}</th>
                         </tr>
                         <tr>
-                            <td>Tempat Lahir</td>
+                            <td>Tanggal Keluar</td>
                             <th scope="row">{{$item->tanggal}}</th>
                         </tr>
                         <tr>
-                            <td>Tanggal Lahir</td>
+                            <td>Jumlah</td>
                             <th scope="row">{{$item->jumlah}}</th>
                         </tr>
                         <tr>
-                            <td>Alamat</td>
+                            <td>Jenis Obat</td>
                             <th scope="row">{{$item->jenis_obt}}</th>
                         </tr>
                         <tr>
-                            <td>Jenis Kelamin</td>
+                            <td>Expire Date</td>
                             <th scope="row">{{$item->ed}}</th>
                         </tr>
                         <tr>
-                            <td>Jenis Kelamin</td>
+                            <td>Keterangan</td>
                             <th scope="row">{{$item->keterangan}}</th>
                         </tr>
                     </tbody>

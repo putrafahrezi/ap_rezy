@@ -1,10 +1,10 @@
 @extends('layouts.master')
-@section('title','Data obat')
-@section('judul','Data obat')
+@section('title','Data obat masuk')
+@section('judul','Data Obat Masuk')
 @section('bc')
     <ol class="breadcrumb float-sm-right">
-        <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item active">Data obat</li>
+        <li class="breadcrumb-item"><a href="/home/">Home</a></li>
+        <li class="breadcrumb-item active">Data Obat </li>
     </ol>
 @endsection
 
@@ -71,12 +71,10 @@
                     <th>Nomor</th>
                     
                     <th>Nama Obat</th>
-                    <th>tanggal</th>
-                    <th>jumlah</th>
+                    <th>Tanggal Masuk</th>
+                    <th>Jumlah</th>
                     <th>Jenis Obat</th>
-                    <th>Suplier</th>
-                    <th>ed</th>
-                    <th>keterangan</th>
+                    <th>Expire Date</th>
                     <th>Action</th>
                     </tr>
                     </thead>
@@ -89,9 +87,7 @@
                     <td>{{$item->tanggal}}</td>
                     <td>{{$item->jumlah}}</td>
                     <td>{{$item->jenis_obt}}</td>
-                    <td>{{$item->supliers->namasuplier}}</td>
                     <td>{{$item->ed}}</td>
-                    <td>{{$item->keterangan}}</td>
                     <td>
                         <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#detail{{$item->id}}">
                             <i class="fa fa-eye"></i>
@@ -115,27 +111,27 @@
                             <th scope="row">{{$item->stokobats->namaobat}}</th>
                         </tr>
                         <tr>
-                            <td>Tempat Lahir</td>
+                            <td>Tanggal Masuk</td>
                             <th scope="row">{{$item->tanggal}}</th>
                         </tr>
                         <tr>
-                            <td>Tanggal Lahir</td>
+                            <td>Jumlah</td>
                             <th scope="row">{{$item->jumlah}}</th>
                         </tr>
                         <tr>
-                            <td>Alamat</td>
+                            <td>Jenis Obat</td>
                             <th scope="row">{{$item->jenis_obt}}</th>
+                        </tr>
+                        <tr>
+                            <td>Expire Date</td>
+                            <th scope="row">{{$item->ed}}</th>
                         </tr>
                         <tr>
                             <td>Suplier</td>
                             <th scope="row">{{$item->supliers->namasuplier}}</th>
                         </tr>
                         <tr>
-                            <td>Jenis Kelamin</td>
-                            <th scope="row">{{$item->ed}}</th>
-                        </tr>
-                        <tr>
-                            <td>Jenis Kelamin</td>
+                            <td>Keterangan</td>
                             <th scope="row">{{$item->keterangan}}</th>
                         </tr>
                     </tbody>

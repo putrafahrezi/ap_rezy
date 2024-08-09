@@ -1,11 +1,11 @@
 @extends('layouts.master')
-@section('title','Tambah obat')
-@section('judul','Tambah obat')
+@section('title','Tambah obat masuk')
+@section('judul','Tambah Obat Masuk')
 @section('bc')
     <ol class="breadcrumb float-sm-right">
-        <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item"><a href="#">Data obat</a></li>
-        <li class="breadcrumb-item active">Tambah obat</li>
+        <li class="breadcrumb-item"><a href="/home/">Home</a></li>
+        <li class="breadcrumb-item"><a href="/dataobat/">Data Obat Masuk</a></li>
+        
     </ol>
 @endsection
 
@@ -42,7 +42,7 @@
                 </div>
                 <div class="mb-3">
                     <label class="form-label">jumlah</label>
-                    <input type="number" class="form-control" name="jumlah">
+                    <input type="text" class="form-control" name="jumlah">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Jenis Obat</label>
