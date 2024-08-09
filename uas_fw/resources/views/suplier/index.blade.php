@@ -1,10 +1,10 @@
 @extends('layouts.master')
 @section('title','Data suplier')
-@section('judul','Data suplier')
+@section('judul','Data Suplier')
 @section('bc')
     <ol class="breadcrumb float-sm-right">
-        <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item active">Data suplier</li>
+        <li class="breadcrumb-item"><a href="/home/">Home</a></li>
+        <li class="breadcrumb-item active">Data Suplier</li>
     </ol>
 @endsection
 
@@ -144,11 +144,11 @@
                     <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                    Yakin ingin menghapus data jurusan <b>{{$item->jurusan}}</b>?
+                    Yakin ingin menghapus data suplier <b>{{$item->namasuplier}}</b>?
                     </div>
                     <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                    <form action="/dataobat/{{$item->id}}" method="post">
+                    <form action="/suplier/{{$item->id}}" method="post">
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="btn btn-primary">Hapus</button>

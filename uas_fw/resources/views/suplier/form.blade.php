@@ -1,11 +1,10 @@
 @extends('layouts.master')
 @section('title','Tambah suplier')
-@section('judul','Tambah suplier')
+@section('judul','Tambah Data Suplier')
 @section('bc')
     <ol class="breadcrumb float-sm-right">
-        <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item"><a href="#">Data suplier</a></li>
-        <li class="breadcrumb-item active">Tambah suplier</li>
+        <li class="breadcrumb-item"><a href="/home/">Home</a></li>
+        <li class="breadcrumb-item"><a href="/suplier/">Data Suplier</a></li>
     </ol>
 @endsection
 
@@ -27,19 +26,19 @@
             <form method="post" action="/suplier/store/" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
-                    <label class="form-label">Kode suplier</label>
+                    <label class="form-label">Kode Suplier</label>
                     <input type="text" class="form-control" name="kdsuplier">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Nama suplier</label>
+                    <label class="form-label">Nama Suplier</label>
                     <input type="text" class="form-control" name="namasuplier">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Hp</label>
+                    <label class="form-label">Handphone</label>
                     <input type="number" class="form-control" name="hp">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">alamat</label>
+                    <label class="form-label">Alamat</label>
                     <input type="text" class="form-control" name="alamat">
                 </div>
                 

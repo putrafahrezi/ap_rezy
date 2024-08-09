@@ -42,4 +42,31 @@ class SuplierController extends Controller
 
         return redirect('/suplier/');
     }
+
+    public function edit(string $id)
+    {
+        $sp = Suplier::find($id);
+        return view('suplier.edit', compact('sp'));
+    }
+
+    public function update(Request $request, string $id)
+    {
+        $sp = Suplier::find($id);
+        $sp->kdsuplier = $request->kdsuplier;
+        $sp->namasuplier = $request->namasuplier;
+        $sp->hp = $request->hp;
+        $sp->alamat = $request->alamat;
+        $sp->save();
+
+
+        return redirect('/suplier/');
+    }
+
+
+    public function destroy(string $id)
+    {
+        $sp = Suplier::find($id);
+        $sp->delete();
+        return redirect('/suplier/');
+    }
 }

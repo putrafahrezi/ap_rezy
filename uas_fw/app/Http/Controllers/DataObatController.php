@@ -36,7 +36,7 @@ class DataObatController extends Controller
     {
         $do = new DataObat;
       
-        $do->stokobats_id = $request->namaobat;
+        $do->stokobats_id= $request->namaobat;
         $do->tanggal = $request->tanggal;
         $do->jumlah = $request->jumlah;
         $do->jenis_obt = $request->jenis_obt;
@@ -49,4 +49,35 @@ class DataObatController extends Controller
         return redirect('/dataobat/');
     }
 
+    public function edit(string $id)
+    {
+        $do = DataObat::find($id);
+        $sto = StokObat::all();
+        $sp = Suplier::all();
+        return view('dataobat.edit', compact('do', 'sto', 'sp'));
+    }
+
+    public function update(Request $request, string $id)
+    {
+        $do = DataObat::find($id);
+        $do->stokobats_id= $request->namaobat;
+        $do->tanggal = $request->tanggal;
+        $do->jumlah = $request->jumlah;
+        $do->jenis_obt = $request->jenis_obt;
+        $do->suppliers_id = $request->splr;
+        $do->ed = $request->ed;
+        $do->keterangan = $request->keterangan;
+        $do->save();
+
+
+        return redirect('/dataobat/');
+    }
+
+
+    public function destroy(string $id)
+    {
+        $do = DataObat::find($id);
+        $do->delete();
+        return redirect('/dataobat/');
+    }
 }

@@ -1,10 +1,10 @@
 @extends('layouts.master')
-@section('title','Data stok')
-@section('judul','Data stok')
+@section('title','Data stok obat')
+@section('judul','Data Stok')
 @section('bc')
     <ol class="breadcrumb float-sm-right">
-        <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item active">Data stok</li>
+        <li class="breadcrumb-item"><a href="/home/">Home</a></li>
+        <li class="breadcrumb-item active">Data Stok</li>
     </ol>
 @endsection
 
@@ -137,7 +137,7 @@
                     </div>
                     </div>
 
-                    <a href="/dataobat/edit/{{$item->id}}" class="btn btn-info btn-xs"><i class="fa fa-pencil-alt"></i></a>
+                    <a href="/stokobat/edit/{{$item->id}}" class="btn btn-info btn-xs"><i class="fa fa-pencil-alt"></i></a>
 
                     <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#hapus{{$item->id}}">
                     <i class="fa fa-trash"></i>
@@ -152,11 +152,11 @@
                     <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                    Yakin ingin menghapus data jurusan <b>{{$item->jurusan}}</b>?
+                    Yakin ingin menghapus data stok obat <b>{{$item->stokobat}}</b>?
                     </div>
                     <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                    <form action="/dataobat/{{$item->id}}" method="post">
+                    <form action="/stokobat/{{$item->id}}" method="post">
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="btn btn-primary">Hapus</button>

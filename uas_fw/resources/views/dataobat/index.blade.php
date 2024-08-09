@@ -160,7 +160,7 @@
                     <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                    Yakin ingin menghapus data jurusan <b>{{$item->jurusan}}</b>?
+                    Yakin ingin menghapus data Obat <b>{{$item->stokobats->namaobat}}</b>?
                     </div>
                     <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>

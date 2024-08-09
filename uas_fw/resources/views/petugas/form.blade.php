@@ -1,11 +1,10 @@
 @extends('layouts.master')
 @section('title','Tambah petugas')
-@section('judul','Tambah petugas')
+@section('judul','Tambah Data Petugas')
 @section('bc')
     <ol class="breadcrumb float-sm-right">
-        <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item"><a href="#">Data petugas</a></li>
-        <li class="breadcrumb-item active">Tambah petugas</li>
+        <li class="breadcrumb-item"><a href="/home/">Home</a></li>
+        <li class="breadcrumb-item"><a href="/petugas/">Data Petugas</a></li>
     </ol>
 @endsection
 
@@ -27,27 +26,27 @@
             <form method="post" action="/petugas/store/" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
-                    <label class="form-label">Kode petugas</label>
+                    <label class="form-label">Kode Petugas</label>
                     <input type="text" class="form-control" name="kdpetugas">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Nama petugas</label>
+                    <label class="form-label">Nama Petugas</label>
                     <input type="text" class="form-control" name="namapetugas">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Hp</label>
+                    <label class="form-label">Handphone</label>
                     <input type="number" class="form-control" name="hp">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">email</label>
+                    <label class="form-label">Email</label>
                     <input type="text" class="form-control" name="email">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">umur</label>
+                    <label class="form-label">Umur</label>
                     <input type="number" class="form-control" name="umur">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">alamat</label>
+                    <label class="form-label">Alamat</label>
                     <input type="text" class="form-control" name="alamat">
                 </div>
                 

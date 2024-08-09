@@ -137,7 +137,7 @@
                     </div>
                     </div>
 
-                    <a href="/dataobat/edit/{{$item->id}}" class="btn btn-info btn-xs"><i class="fa fa-pencil-alt"></i></a>
+                    <a href="/obatkeluar/edit/{{$item->id}}" class="btn btn-info btn-xs"><i class="fa fa-pencil-alt"></i></a>
 
                     <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#hapus{{$item->id}}">
                     <i class="fa fa-trash"></i>
@@ -152,11 +152,11 @@
                     <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                    Yakin ingin menghapus data <b>{{$item->kdobat}}</b>?
+                    Yakin ingin menghapus data Obat <b>{{$item->stokobats->namaobat}}</b>?
                     </div>
                     <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                    <form action="/dataobat/{{$item->id}}" method="post">
+                    <form action="/obatkeluar/{{$item->id}}" method="post">
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="btn btn-primary">Hapus</button>

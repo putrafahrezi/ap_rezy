@@ -1,11 +1,10 @@
 @extends('layouts.master')
-@section('title','Tambah stok')
-@section('judul','Tambah stok')
+@section('title','Tambah stok obat')
+@section('judul','Tambah Stok Obat')
 @section('bc')
     <ol class="breadcrumb float-sm-right">
-        <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item"><a href="#">Data stok</a></li>
-        <li class="breadcrumb-item active">Tambah stok</li>
+        <li class="breadcrumb-item"><a href="/home/">Home</a></li>
+        <li class="breadcrumb-item"><a href="/stokobat/">Data Stok</a></li>
     </ol>
 @endsection
 
@@ -41,11 +40,11 @@
                     </select>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">stok</label>
+                    <label class="form-label">Stok</label>
                     <input type="text" class="form-control" name="stok">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Nama petugas</label>
+                    <label class="form-label">Nama Petugas</label>
                     <select name="petugas" class="form-control" id="">
                                 <option hidden value="">-Pilih Petugas-</option>
                                 @foreach ($ptg as $item)
@@ -54,7 +53,7 @@
                             </select>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">keterangan</label>
+                    <label class="form-label">Keterangan</label>
                     <input type="text" class="form-control" name="keterangan">
                 </div>
                 

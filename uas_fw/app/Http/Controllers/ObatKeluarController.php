@@ -47,4 +47,34 @@ class ObatKeluarController extends Controller
         return redirect('/obatkeluar/');
     }
 
+    public function edit(string $id)
+    {
+        $ok = ObatKeluar::find($id);
+        $sto = StokObat::all();
+        return view('obatkeluar.edit', compact('ok', 'sto'));
+    }
+
+    public function update(Request $request, string $id)
+    {
+        $ok = ObatKeluar::find($id);
+        $ok->stokobats_id = $request->namaobat;
+        $ok->tanggal = $request->tanggal;
+        $ok->jumlah = $request->jumlah;
+        $ok->jenis_obt = $request->jenis_obt;
+        $ok->ed = $request->ed;
+        $ok->keterangan = $request->keterangan;
+        $ok->save();
+
+
+        return redirect('/obatkeluar/');
+    }
+
+
+    public function destroy(string $id)
+    {
+        $ok = ObatKeluar::find($id);
+        $ok->delete();
+        return redirect('/obatkeluar/');
+    }
+
 }

@@ -9,10 +9,9 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
 class DataObat extends Model
 {
     protected $table = 'dataobats';
-    protected $primaryKey = 'id';
+    // protected $primaryKey = 'id';
 
-    public function stokobats(): HasOne
-    {
+    public function stokobats() : HasOne {
         return $this->hasOne(StokObat::class, 'id','stokobats_id');
     }
 
