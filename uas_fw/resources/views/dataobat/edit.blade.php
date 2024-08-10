@@ -2,7 +2,11 @@
 @section('title','Edit Obat Masuk')
 @section('judul','Edit Obat Masuk')
 @section('heading','Edit Obat Masuk')
-
+@section('bc')
+    <ol class="breadcrumb float-sm-right">
+        <li class="breadcrumb-item"><a href="/dataobat/">Data Obat masuk</a></li>
+    </ol>
+@endsection
 
 
 @section('content')
@@ -50,7 +54,10 @@
                         <option value="Kapsul" {{ $do-> jenis_obt == 'Kapsul' ? 'selected' : '' }}>Kapsul</option>
                         <option value="Sirup" {{ $do->  jenis_obt == 'Sirup' ? 'selected' : '' }}>Sirup</option>
                     </select>
-
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Expire Date</label>
+                    <input type="date" name="ed" value="{{$do->ed}}" class="form-control">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Suplier</label>
@@ -60,10 +67,6 @@
                             <option value="{{$item2->id}}">{{$item2->namasuplier}}</option>
                         @endforeach
                     </select>
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">ED</label>
-                    <input type="date" name="ed" value="{{$do->ed}}" class="form-control">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Keterangan</label>

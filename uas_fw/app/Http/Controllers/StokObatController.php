@@ -34,7 +34,6 @@ class StokObatController extends Controller
     public function store(Request $request)
     {
         $so = new StokObat;
-      
         $so->namaobat = $request->namaobat;
         $so->jenis_obt = $request->jenis_obt;
         $so->stok = $request->stok;
@@ -43,6 +42,35 @@ class StokObatController extends Controller
         $so->save();
 
 
+        return redirect('/stokobat/');
+    }
+
+    public function edit(string $id)
+    {
+        $so = StokObat::find($id);
+        $ptg = Petugas::all();
+        return view('stokobat.edit', compact('so', 'ptg'));
+    }
+
+    public function update(Request $request, string $id)
+    {
+        $so = StokObat::find($id);
+        $so->namaobat = $request->namaobat;
+        $so->jenis_obt = $request->jenis_obt;
+        $so->stok = $request->stok;
+        $so->petugas_id = $request->petugas;
+        $so->keterangan = $request->keterangan;
+        $so->save();
+
+
+        return redirect('/stokobat/');
+    }
+
+
+    public function destroy(string $id)
+    {
+        $so = StokObat::find($id);
+        $so->delete();
         return redirect('/stokobat/');
     }
 }

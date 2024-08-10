@@ -63,7 +63,7 @@
                             </select>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">ed</label>
+                    <label class="form-label">Expire Date</label>
                     <input type="date" class="form-control" name="ed">
                 </div>
                 <div class="mb-3">

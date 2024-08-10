@@ -2,7 +2,11 @@
 @section('title','Edit petugas')
 @section('judul','Edit petugas')
 @section('heading','Edit petugas')
-
+@section('bc')
+    <ol class="breadcrumb float-sm-right">
+        <li class="breadcrumb-item"><a href="/petugas/">Data petugas</a></li>
+    </ol>
+@endsection
 
 
 @section('content')

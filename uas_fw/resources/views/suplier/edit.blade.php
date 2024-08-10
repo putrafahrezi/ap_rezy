@@ -2,7 +2,11 @@
 @section('title','Edit suplier')
 @section('judul','Edit suplier')
 @section('heading','Edit suplier')
-
+@section('bc')
+    <ol class="breadcrumb float-sm-right">
+        <li class="breadcrumb-item"><a href="/suplier/">Data suplier</a></li>
+    </ol>
+@endsection
 
 
 @section('content')

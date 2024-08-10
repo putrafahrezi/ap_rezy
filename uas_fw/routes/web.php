@@ -31,6 +31,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/stokobat/', [StokObatController::class, 'index']);
 Route::get('/stokobat/form/', [StokObatController::class, 'create']);
 Route::post('/stokobat/store/', [StokObatController::class, 'store']);
+Route::get('/stokobat/edit/{id}', [StokObatController::class, 'edit']);
+Route::put('/stokobat/{id}', [StokObatController::class, 'update']);
+Route::delete('/stokobat/{id}', [StokObatController::class, 'destroy']);
 
 
 //obatmasuk
