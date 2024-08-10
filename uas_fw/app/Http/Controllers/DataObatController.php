@@ -16,7 +16,9 @@ class DataObatController extends Controller
     {
         $nomor = 1;
         $do = DataObat::all();
-        return view('dataobat.index',compact('nomor','do'));
+        $sto = StokObat::all();
+        $sp   = Suplier::all();
+        return view('dataobat.index',compact('nomor','do','sto','sp'));
     }
 
      /**

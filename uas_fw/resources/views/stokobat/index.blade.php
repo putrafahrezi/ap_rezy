@@ -120,7 +120,7 @@
                         </tr>
                         <tr>
                             <td>Nama petugas</td>
-                            <th scope="row">{{$item->namapetugas}}</th>
+                            <th scope="row">{{$item->petugas->namapetugas}}</th>
                         </tr>
                         <tr>
                             <td>keterangan</td>

@@ -54,7 +54,7 @@
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">nama petugas</label>
                     <select name="petugas" class="form-control" id="">
-                       <option hidden value="{{$so->petugas_id}}">{{$so->petugas->namaobat}}</option>
+                       <option  value="{{$so->petugas_id}}">{{$so->petugas_id}}</option>
                         @foreach ($ptg as $item2)
                             <option value="{{$item2->id}}">{{$item2->namapetugas}}</option>
                         @endforeach
